@@ -1,0 +1,20 @@
+--- 
+- hosts: all
+  become: yes 
+  tasks: 
+  - name: install tree on ansible ubuntu nodes
+    apt:
+       name: tree 
+       state: absent
+
+  - name: install wget on ansible ubuntu nodes
+    apt: 
+      name: wget
+      state: absent    
+
+  - name: install git on ansible nodes
+    apt:
+      name: git
+      state: present      
+
+         
